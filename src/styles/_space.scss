@@ -1,0 +1,37 @@
+$base: 16px;
+
+@mixin margin($size: "md") {
+  @if $size == "sm" {
+    margin: $base * 0.75;
+  }
+
+  @if $size == "md" {
+    margin: $base;
+  }
+
+  @if $size == "lg" {
+    margin: $base * 1.25;
+  }
+
+  @if $size == "xl" {
+    margin: $base * 1.5;
+  }
+}
+
+@mixin padding($size: "md") {
+  @if $size == "sm" {
+    padding: $base * 0.75;
+  }
+
+  @if $size == "md" {
+    padding: $base;
+  }
+
+  @if $size == "lg" {
+    padding: $base * 1.25;
+  }
+
+  @if $size == "xl" {
+    padding: $base * 1.5;
+  }
+}

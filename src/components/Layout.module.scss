@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-auto-rows: minmax(100vh, auto);
+}
+
+.sidebar {
+  background-color: beige;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: min-content auto;
+  // background-color: rgb(220, 245, 220);
+}
+
+.topbar {
+  // background-color: rgb(220, 245, 233);
+}
+
+.container {
+  // background-color: rgb(220, 231, 245);
+}
+
+.infobar {
+  // background-color: rgb(231, 220, 245);
+}

@@ -1,0 +1,77 @@
+@use "../styles/space";
+@use "../styles/color";
+@use "../styles/text";
+
+.wrapper {
+  border-bottom: 2px solid color.$gray-3;
+  display: grid;
+  grid-template-columns: min-content auto auto min-content;
+  column-gap: space.$base;
+  @include space.padding;
+}
+
+.title {
+  @include text.title;
+  @include space.padding;
+
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  background: color.$white;
+  @include space.padding;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+
+  input {
+    @include space.padding;
+    @include text.sub-sub-title;
+    border: 0;
+    width: 100%;
+
+    &::placeholder {
+      color: color.$gray-2;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  svg path {
+    color: color.$gray-2;
+  }
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    @include space.padding;
+
+    a {
+      display: inline-block;
+      @include text.sub-title;
+    }
+  }
+}
+
+.recent {
+  a {
+    @include text.sub-title;
+    display: flex;
+    align-items: center;
+  }
+
+  @include space.padding;
+
+  padding-top: 0;
+  padding-bottom: 0;
+  svg {
+    @include space.margin;
+  }
+}
