@@ -1,37 +1,75 @@
+@use "sass:string";
+
 $base: 16px;
 
-@mixin margin($size: "md") {
+@mixin margin($direction: "trbl", $size: "md") {
+  $margin-value: $base;
+
   @if $size == "sm" {
-    margin: $base * 0.75;
+    $margin-value: $base * 0.75;
   }
 
   @if $size == "md" {
-    margin: $base;
+    $margin-value: $base;
   }
 
   @if $size == "lg" {
-    margin: $base * 1.25;
+    $margin-value: $base * 1.25;
   }
 
   @if $size == "xl" {
-    margin: $base * 1.5;
+    $margin-value: $base * 1.5;
+  }
+
+  @if (str-index($direction, "r")) {
+    margin-right: $margin-value;
+  }
+
+  @if (str-index($direction, "l")) {
+    margin-left: $margin-value;
+  }
+
+  @if (str-index($direction, "t")) {
+    margin-top: $margin-value;
+  }
+
+  @if (str-index($direction, "b")) {
+    margin-bottom: $margin-value;
   }
 }
 
-@mixin padding($size: "md") {
+@mixin padding($direction: "trbl", $size: "md") {
+  $padding-value: $base;
+
   @if $size == "sm" {
-    padding: $base * 0.75;
+    $padding-value: $base * 0.75;
   }
 
   @if $size == "md" {
-    padding: $base;
+    $padding-value: $base;
   }
 
   @if $size == "lg" {
-    padding: $base * 1.25;
+    $padding-value: $base * 1.25;
   }
 
   @if $size == "xl" {
-    padding: $base * 1.5;
+    $padding-value: $base * 1.5;
+  }
+
+  @if (str-index($direction, "r")) {
+    padding-right: $padding-value;
+  }
+
+  @if (str-index($direction, "l")) {
+    padding-left: $padding-value;
+  }
+
+  @if (str-index($direction, "t")) {
+    padding-top: $padding-value;
+  }
+
+  @if (str-index($direction, "b")) {
+    padding-bottom: $padding-value;
   }
 }
