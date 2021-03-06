@@ -25,16 +25,39 @@ export default function Infobar() {
         <Card.Content>
           <Card.Grid2>
             <div className={styles.info}>
-              <div className={styles.title}>Total Sales</div>
-              <div className={styles.value}>$281.90</div>
+              <div className={styles.title}>Total Sessions</div>
+              <div className={styles.value}>456</div>
             </div>
             <div className={styles.graph}></div>
           </Card.Grid2>
         </Card.Content>
         <Card.Footer>
           <Card.Grid2>
-            <div>6 toal orders</div>
-            <div>view port</div>
+            <Card.Grid2>
+              <div>Live</div>
+              <div>4 visitors</div>
+            </Card.Grid2>
+            <div>See live view </div>
+          </Card.Grid2>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Content>
+          <Card.Grid2>
+            <div className={styles.info}>
+              <div className={styles.title}>Customer rate</div>
+              <div className={styles.value}>5.43%</div>
+            </div>
+            <div className={styles.graph}></div>
+          </Card.Grid2>
+        </Card.Content>
+        <Card.Footer>
+          <Card.Grid2>
+            <Card.Grid2>
+              <div>Live</div>
+              <div>4 visitors</div>
+            </Card.Grid2>
+            <div>See live view </div>
           </Card.Grid2>
         </Card.Footer>
       </Card>
