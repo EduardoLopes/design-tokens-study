@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Design tokens study
+
+I'm making this layout: https://dribbble.com/shots/14561684/attachments/6251084?mode=media
+
+-----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
