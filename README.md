@@ -1,6 +1,6 @@
 # Design tokens study
 
-I'm making this layout: https://dribbble.com/shots/14561684/attachments/6251084?mode=media
+I'm using this layout as base: https://dribbble.com/shots/14561684/attachments/6251084?mode=media
 
 -----
 

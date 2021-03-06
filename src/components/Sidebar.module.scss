@@ -4,7 +4,7 @@
 @use "../styles/text";
 
 .wrapper {
-  border-right: 2px solid color.$gray-3;
+  @include border.solid("r");
   height: 100%;
   display: grid;
   grid-template-rows: min-content auto min-content;

@@ -1,0 +1,43 @@
+@use "../styles/space";
+@use "../styles/color";
+@use "../styles/border";
+@use "../styles/text";
+
+.wrapper {
+  @include space.padding;
+  @include border.solid("l");
+  height: 100%;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: space.$base;
+  flex: 1;
+}
+
+.footerText {
+  @include text.sub-title;
+}
+
+.info {
+  @include space.padding;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title {
+    @include text.sub-title;
+  }
+
+  .value {
+    @include text.title;
+    font-size: 2em;
+  }
+}
+
+.graph {
+  width: 150px;
+  height: 100px;
+  background: color.$purple;
+  @include border.radius;
+  @include space.margin;
+}

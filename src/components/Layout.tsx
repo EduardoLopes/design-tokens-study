@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Layout.module.scss";
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
+import Infobar from "./Infobar";
 
 export default function Layout() {
   return (
@@ -16,7 +17,9 @@ export default function Layout() {
         </div>
         <div className={styles.container}></div>
       </div>
-      <div className={styles.infobar}></div>
+      <div className={styles.infobar}>
+        <Infobar />
+      </div>
     </div>
   );
 }

@@ -1,3 +1,60 @@
+@use "color";
+
 @mixin full-circle() {
   border-radius: 50%;
+}
+
+@mixin radius($direction: "bl br tl tr", $size: "md") {
+  $base: 16px;
+  $radius-value: $base;
+
+  @if $size == "sm" {
+    $radius-value: $base * 0.75;
+  }
+
+  @if $size == "md" {
+    $radius-value: $base;
+  }
+
+  @if $size == "lg" {
+    $radius-value: $base * 1.25;
+  }
+
+  @if $size == "xl" {
+    $radius-value: $base * 1.5;
+  }
+
+  @if (str-index($direction, "bl")) {
+    border-bottom-left-radius: $radius-value;
+  }
+
+  @if (str-index($direction, "br")) {
+    border-bottom-right-radius: $radius-value;
+  }
+
+  @if (str-index($direction, "tl")) {
+    border-top-left-radius: $radius-value;
+  }
+
+  @if (str-index($direction, "tr")) {
+    border-top-right-radius: $radius-value;
+  }
+}
+
+@mixin solid($direction: "trbl") {
+  @if (str-index($direction, "r")) {
+    border-right: 2px solid color.$gray-3;
+  }
+
+  @if (str-index($direction, "l")) {
+    border-left: 2px solid color.$gray-3;
+  }
+
+  @if (str-index($direction, "t")) {
+    border-top: 2px solid color.$gray-3;
+  }
+
+  @if (str-index($direction, "b")) {
+    border-bottom: 2px solid color.$gray-3;
+  }
 }

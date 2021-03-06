@@ -1,9 +1,10 @@
 @use "../styles/space";
+@use "../styles/border";
 @use "../styles/color";
 @use "../styles/text";
 
 .wrapper {
-  border-bottom: 2px solid color.$gray-3;
+  @include border.solid("b");
   display: grid;
   grid-template-columns: min-content auto auto min-content;
   column-gap: space.$base;

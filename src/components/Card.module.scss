@@ -1,0 +1,25 @@
+@use "../styles/space";
+@use "../styles/color";
+@use "../styles/border";
+@use "../styles/text";
+
+.wrapper {
+  @include border.solid;
+  @include border.radius;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+}
+
+.content {
+  @include space.padding;
+}
+
+.footer {
+  @include border.solid("t");
+  @include space.padding("lrtb", "xl");
+  @include text.sub-title;
+}
