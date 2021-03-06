@@ -1,0 +1,56 @@
+@use "../styles/space";
+@use "../styles/border";
+@use "../styles/color";
+@use "../styles/text";
+
+.wrapper {
+  border-right: 2px solid color.$gray-3;
+  height: 100%;
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+}
+
+.avatar {
+  @include space.padding;
+
+  span {
+    @include border.full-circle;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: color.$gray-1;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    li {
+      list-style: none;
+      display: flex;
+
+      @include space.margin("trbl", "sm");
+
+      a {
+        @include text.sub-sub-title;
+        @include space.padding("trbl", "sm");
+
+        &:hover {
+          background: color.$white;
+          color: color.$purple;
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  @include space.padding;
+  color: color.$gray-1;
+}

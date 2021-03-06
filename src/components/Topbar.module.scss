@@ -20,9 +20,7 @@
 
 .search {
   background: color.$white;
-  @include space.padding;
-  padding-top: 0;
-  padding-bottom: 0;
+  @include space.padding("lr");
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -67,10 +65,7 @@
     align-items: center;
   }
 
-  @include space.padding;
-
-  padding-top: 0;
-  padding-bottom: 0;
+  @include space.padding("lr");
   svg {
     @include space.margin;
   }
