@@ -10,11 +10,35 @@
 
 .grid2 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.verticalSpaceBetween,
+.horizontalSpaceBetween {
+  justify-content: space-between;
+  display: flex;
+}
+
+.verticalSpaceBetween {
+  flex-direction: column;
+}
+
+.horizontalSpaceBetween {
+  flex-direction: row;
+}
+
+.title {
+  @include text.title;
+  text-align: left;
+}
+
+.subTitle {
+  @include text.sub-title;
+  text-align: left;
 }
 
 .content {
-  @include space.padding;
+  @include space.padding("l r b t", "xl");
 }
 
 .footer {

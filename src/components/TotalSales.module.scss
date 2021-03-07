@@ -1,0 +1,17 @@
+@use "../styles/space";
+@use "../styles/color";
+@use "../styles/border";
+
+.graphWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph {
+  @include space.margin("l");
+  width: 100%;
+  height: 100px;
+  background: color.$purple;
+  @include border.radius;
+}
