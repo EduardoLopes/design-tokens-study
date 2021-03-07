@@ -1,7 +1,6 @@
 @use "../styles/space";
 @use "../styles/color";
 @use "../styles/border";
-@use "../styles/text";
 
 .wrapper {
   @include space.padding;
@@ -10,7 +9,5 @@
   width: 420px;
   overflow-y: auto;
   display: grid;
-  grid-auto-rows: min-content;
   gap: space.$base;
-  flex: 1;
 }

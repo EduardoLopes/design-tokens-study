@@ -19,7 +19,7 @@ export default function TotalSales() {
       </Content>
       <Footer>
         <SpaceBetween.Horizonal>
-          <SubTitle>6 toal orders</SubTitle>
+          <SubTitle>6 total orders</SubTitle>
           <SubTitle>view port</SubTitle>
         </SpaceBetween.Horizonal>
       </Footer>
